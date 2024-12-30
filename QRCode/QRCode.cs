@@ -4,20 +4,42 @@ namespace QRCodeGen;
 
 public class QRCode
 {
-    protected QRCodeMode Mode { get; }
+    public struct EncodingData
+    {
+        public int ModeIndicator { get; set; }
+        public int CharacterCountIndicator { get; set; }
+        public string[] EncodedData { get; set; }
+        
+        public string BitString => GetBitString();
+        
+        public EncodingData(int modeIndicator, int characterCountIndicator, string[] encodedData)
+        {
+            ModeIndicator = modeIndicator;
+            CharacterCountIndicator = characterCountIndicator;
+            EncodedData = encodedData;
+        }
+
+        private string GetBitString()
+        {
+            var returnValue = "";
+            
+            returnValue += ModeIndicator;
+            returnValue += CharacterCountIndicator.ToTenBitBinaryString();
+            returnValue += EncodedData;
+            
+            return returnValue; 
+        }
+    }
+    
+    public QRCodeMode Mode { get; }
     protected QRCodeVersion Version { get; }
-    protected int ModeIndicator { get; }
-    protected int CharacterCountIndicator { get; }
+    protected EncodingData EncodedData { get; }
     
     public QRCode(string data, ErrorCorrectionLevel errorCorrectionLevel)
     {
         Mode = GetMostEfficientMode(data);
         Version = GetSmallestVersion(data, errorCorrectionLevel);
-        
-        ModeIndicator = Mode.ToModeIndicator();
-        CharacterCountIndicator = GetCharacterCountIndicator(data);
-        
-        // Encoding data
+
         IEncoder encoder = Mode switch
         {
             QRCodeMode.Numeric => new NumericEncoder(),
@@ -25,12 +47,13 @@ public class QRCode
             QRCodeMode.Byte => new ByteEncoder(),
             _ => throw new ArgumentOutOfRangeException()
         };
-        
-        string[] encodedData = encoder.Encode(data);
-        foreach (var binary in encodedData)
+
+        EncodedData = new EncodingData()
         {
-            Console.WriteLine(binary);
-        }
+            ModeIndicator = Mode.ToModeIndicator(),
+            CharacterCountIndicator = GetCharacterCountIndicator(data),
+            EncodedData = encoder.Encode(data)
+        };
     }
     
     private QRCodeMode GetMostEfficientMode(string data)
