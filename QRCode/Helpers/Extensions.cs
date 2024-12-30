@@ -68,4 +68,25 @@ public static class Extensions
             _ => throw new ArgumentOutOfRangeException(nameof(c), c, null)
         };
     }
+    
+    public static string[] SplitInParts(this string str, int partLength)
+    {
+        if (str == null)
+        {
+            throw new ArgumentNullException(nameof(str));
+        }
+
+        if (partLength <= 0)
+        {
+            throw new ArgumentException("Part length has to be positive.", nameof(partLength));
+        }
+        
+        var result = new List<string>();
+        for (int i = 0; i < str.Length; i += partLength)
+        {
+            result.Add(str.Substring(i, Math.Min(partLength, str.Length - i)));
+        }
+        
+        return result.ToArray();
+    }
 }

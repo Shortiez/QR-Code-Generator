@@ -27,7 +27,10 @@ public class QRCode
         };
         
         string[] encodedData = encoder.Encode(data);
-        Console.WriteLine(encodedData.Length);
+        foreach (var binary in encodedData)
+        {
+            Console.WriteLine(binary);
+        }
     }
     
     private QRCodeMode GetMostEfficientMode(string data)

@@ -7,9 +7,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73f6de64-3a0b-4cbc-957c-42cefeb1c0ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/QRCode/BinaryHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QRCode/IEncoder.cs" afterDir="false" />
+    <list default="true" id="73f6de64-3a0b-4cbc-957c-42cefeb1c0ff" name="Changes" comment="Added a version library to store the configs for all 40 versions of QR codes.&#10;&#10;QR Code data analysis">
+      <change afterPath="$PROJECT_DIR$/QRCode/Encoders/AlphanumericEncoder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QRCode/Encoders/ByteEncoder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QRCode/Encoders/IEncoder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QRCode/Encoders/NumericEncoder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QRCode/Helpers/BinaryHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.QRCode/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QRCode/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QRCode/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QRCode/Helpers/Extensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QRCode/QRCode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QRCode/QRCode.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,29 +28,47 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Shortiez"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Shortiez/QR-Code-Generator.git",
+    "accountId": "815049f2-e3ee-4cd1-b08f-d751a0b3624f"
+  }
+}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/89c4224f79e6b275db5cce1623a97eec6e1bbd4755a617dd36d073d2347236a5/String.Manipulation.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2qufQDP0m4kP2tOqSTOt1LuC7y7" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.QRCode.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.QRCode.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="QRCode" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -74,16 +98,60 @@
       <option name="presentableId" value="Default" />
       <updated>1735517362819</updated>
       <workItem from="1735517365169" duration="3568000" />
-      <workItem from="1735558518345" duration="3913000" />
+      <workItem from="1735558518345" duration="4677000" />
     </task>
+    <task id="LOCAL-00001" summary="Added a version library to store the configs for all 40 versions of QR codes.&#10;&#10;QR Code data analysis">
+      <option name="closed" value="true" />
+      <created>1735571812949</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735571812949</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Added a version library to store the configs for all 40 versions of QR codes.&#10;&#10;QR Code data analysis" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a version library to store the configs for all 40 versions of QR codes.&#10;&#10;QR Code data analysis" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/QRCode/QRCode.cs</url>
+          <line>29</line>
+          <properties documentPath="$PROJECT_DIR$/QRCode/QRCode.cs" containingFunctionPresentation="Constructor 'QRCode'">
+            <startOffsets>
+              <option value="959" />
+            </startOffsets>
+            <endOffsets>
+              <option value="994" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/QRCode/QRCode.cs</url>
+          <line>31</line>
+          <properties documentPath="$PROJECT_DIR$/QRCode/QRCode.cs" containingFunctionPresentation="Constructor 'QRCode'">
+            <startOffsets>
+              <option value="1017" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1043" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
