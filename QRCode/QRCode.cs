@@ -68,7 +68,7 @@ public class QRCode
             return QRCodeMode.Numeric;
         }
         
-        if (data.All(char.IsLetterOrDigit))
+        if (data.IsAlphaNumericUpper())
         {
             return QRCodeMode.Alphanumeric;
         }

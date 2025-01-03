@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace QRCodeGen;
 
@@ -16,57 +17,16 @@ public static class Extensions
         };
     }
     
-    public static int AsAlphaNumeric(char c)
+    public static Boolean IsAlphaNumeric(this string strToCheck)
     {
-        return c switch
-        {
-            '0' => 0,
-            '1' => 1,
-            '2' => 2,
-            '3' => 3,
-            '4' => 4,
-            '5' => 5,
-            '6' => 6,
-            '7' => 7,
-            '8' => 8,
-            '9' => 9,
-            'A' => 10,
-            'B' => 11,
-            'C' => 12,
-            'D' => 13,
-            'E' => 14,
-            'F' => 15,
-            'G' => 16,
-            'H' => 17,
-            'I' => 18,
-            'J' => 19,
-            'K' => 20,
-            'L' => 21,
-            'M' => 22,
-            'N' => 23,
-            'O' => 24,
-            'P' => 25,
-            'Q' => 26,
-            'R' => 27,
-            'S' => 28,
-            'T' => 29,
-            'U' => 30,
-            'V' => 31,
-            'W' => 32,
-            'X' => 33,
-            'Y' => 34,
-            'Z' => 35,
-            ' ' => 36,
-            '$' => 37,
-            '%' => 38,
-            '*' => 39,
-            '+' => 40,
-            '-' => 41,
-            '.' => 42,
-            '/' => 43,
-            ':' => 44,
-            _ => throw new ArgumentOutOfRangeException(nameof(c), c, null)
-        };
+        Regex rg = new Regex(@"^[a-zA-Z0-9\s,]*$");
+        return rg.IsMatch(strToCheck);
+    }
+    
+    public static Boolean IsAlphaNumericUpper(this string strToCheck)
+    {
+        Regex rg = new Regex(@"^[A-Z0-9\s,]*$");
+        return rg.IsMatch(strToCheck);
     }
     
     public static string[] SplitInParts(this string str, int partLength)
