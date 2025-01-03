@@ -7,9 +7,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73f6de64-3a0b-4cbc-957c-42cefeb1c0ff" name="Changes" comment="Reorganized helper files and fixed a bug in the SplitInParts function.&#10;&#10;Added a numeric encoder to turn numerics into binary">
+    <list default="true" id="73f6de64-3a0b-4cbc-957c-42cefeb1c0ff" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/QRCode/Helpers/BitArrayExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QRCode/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QRCode/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QRCode/Encoders/AlphanumericEncoder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QRCode/Encoders/AlphanumericEncoder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QRCode/Encoders/ByteEncoder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QRCode/Encoders/ByteEncoder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QRCode/Encoders/IEncoder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QRCode/Encoders/IEncoder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QRCode/Encoders/NumericEncoder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QRCode/Encoders/NumericEncoder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QRCode/Helpers/BinaryHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QRCode/Helpers/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QRCode/Helpers/Extensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QRCode/QRCode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QRCode/QRCode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QRCode/VersionLibrary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QRCode/VersionLibrary.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,18 +30,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Shortiez"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Shortiez&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Shortiez/QR-Code-Generator.git",
-    "accountId": "815049f2-e3ee-4cd1-b08f-d751a0b3624f"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Shortiez/QR-Code-Generator.git&quot;,
+    &quot;accountId&quot;: &quot;815049f2-e3ee-4cd1-b08f-d751a0b3624f&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/89c4224f79e6b275db5cce1623a97eec6e1bbd4755a617dd36d073d2347236a5/String.Manipulation.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -49,20 +57,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.QRCode.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.QRCode.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="QRCode" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -92,7 +100,11 @@
       <option name="presentableId" value="Default" />
       <updated>1735517362819</updated>
       <workItem from="1735517365169" duration="3568000" />
-      <workItem from="1735558518345" duration="5248000" />
+      <workItem from="1735558518345" duration="5407000" />
+      <workItem from="1735595007947" duration="2363000" />
+      <workItem from="1735650963165" duration="1157000" />
+      <workItem from="1735661865395" duration="6897000" />
+      <workItem from="1735925936952" duration="3990000" />
     </task>
     <task id="LOCAL-00001" summary="Added a version library to store the configs for all 40 versions of QR codes.&#10;&#10;QR Code data analysis">
       <option name="closed" value="true" />
@@ -110,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735572639542</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added EncodingData struct to store the QRCodes encoded data.">
+      <option name="closed" value="true" />
+      <created>1735573273084</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1735573273084</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +143,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Added a version library to store the configs for all 40 versions of QR codes.&#10;&#10;QR Code data analysis" />
     <MESSAGE value="Reorganized helper files and fixed a bug in the SplitInParts function.&#10;&#10;Added a numeric encoder to turn numerics into binary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reorganized helper files and fixed a bug in the SplitInParts function.&#10;&#10;Added a numeric encoder to turn numerics into binary" />
+    <MESSAGE value="Added EncodingData struct to store the QRCodes encoded data." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added EncodingData struct to store the QRCodes encoded data." />
   </component>
 </project>

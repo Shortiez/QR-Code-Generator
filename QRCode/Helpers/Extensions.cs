@@ -5,17 +5,17 @@ namespace QRCodeGen;
 
 public static class Extensions
 {
-    public static int ToModeIndicator(this QRCodeMode mode)
+    public static BitArray ToModeIndicator(this QRCodeMode mode)
     {
         return mode switch
         {
-            QRCodeMode.Numeric => 0001,
-            QRCodeMode.Alphanumeric => 0010,
-            QRCodeMode.Byte => 0100,
+            QRCodeMode.Numeric => new BitArray(new bool[] {false, false, false, true}),
+            QRCodeMode.Alphanumeric => new BitArray(new bool[] {false, false, true, false}),
+            QRCodeMode.Byte => new BitArray(new bool[] {false, true, false, false}),
             _ => throw new ArgumentOutOfRangeException(nameof(mode), mode, null)
         };
     }
-
+    
     public static int AsAlphaNumeric(char c)
     {
         return c switch

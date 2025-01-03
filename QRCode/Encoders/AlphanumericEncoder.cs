@@ -1,8 +1,10 @@
+using System.Collections;
+
 namespace QRCodeGen;
 
 public class AlphanumericEncoder : IEncoder
 {
-    public string[] Encode(string data)
+    public BitArray[] Encode(string data)
     {
         throw new NotImplementedException();
     }

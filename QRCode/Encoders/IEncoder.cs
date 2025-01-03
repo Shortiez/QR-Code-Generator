@@ -4,5 +4,5 @@ namespace QRCodeGen;
 
 public interface IEncoder
 {
-    public string[] Encode(string data);
+    public BitArray[] Encode(string data);
 }
